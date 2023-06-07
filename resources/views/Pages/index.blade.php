@@ -22,16 +22,18 @@
     
         
         
-        
-            @for($i = 0; $i < count($arr)-1; $i++)
+        @if($arr != 0)
+            @for($i = 0; $i < count($arr); $i++)
             {
                 <tr>
                     <td>{{$i}}</td>
                     <td>{{$arr[$i]}}</td>
+                    <td><a href="{{route('edit', $i)}}">Редактировать</a></td>
+                    <td><a href="#"></a></td>
                 </tr>
             }
             @endfor
-        
+        @endif
         
         
 </table>

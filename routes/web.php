@@ -17,3 +17,7 @@ use App\Http\Controllers\Quiz;
 Route::get('/', [Quiz::class, 'index'])->name('index');
 Route::get('/create', [Quiz::class, 'createQuiz'])->name('create');
 Route::post('/create_confirmed', [Quiz::class, 'createQuiz_confirmed'])->name('createQuiz_confirmed');
+Route::get('/edit/{id}', [Quiz::class, 'edit'])->name('edit');
+Route::post('/edit_confirmed', [Quiz::class, 'edit_confirmed'])->name('edit_confirmed');
+Route::get('/delete/{id}', [Quiz::class, 'delete'])->name('delete');
+Route::post('/delete_confirmed', [Quiz::class, 'delete_confirmed'])->name('delete_confirmed');
