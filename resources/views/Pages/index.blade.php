@@ -29,7 +29,7 @@
                     <td>{{$i}}</td>
                     <td>{{$arr[$i]}}</td>
                     <td><a href="{{route('edit', $i)}}">Редактировать</a></td>
-                    <td><a href="#"></a></td>
+                    <td><a href="{{route('delete', $i)}}">Удалить</a></td>
                 </tr>
             }
             @endfor
